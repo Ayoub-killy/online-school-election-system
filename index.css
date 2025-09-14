@@ -1,0 +1,141 @@
+*{
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+}
+.head {
+    background: linear-gradient(to left, green, rgb(226, 226, 128), black, black, rgb(226, 226, 128), Blue);
+    font-size: x-large;
+    color: white;
+}
+.head h1 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.head h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+    background-color: rgb(62, 62, 228);
+    padding-right: 5%;
+}
+.navigation ul {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-left: 20px;
+    column-gap: 30px;
+    list-style: none;
+}
+.navigation ul li a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+.navigation ul li a:hover {
+     text-decoration: underline solid 2px;
+     transition: width 0.3s ease-in-out;
+    border-radius: 3px;
+}
+.hamburger {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+.icon {
+    height: 3vh;
+    width: 2vw;
+}
+.getIn {
+    height: 30vh;
+    width: 70vw;
+    background-color: rgb(62, 65, 228);
+    border-radius: 20px;
+    margin: 10rem;
+    text-align: center;
+    color: aliceblue;
+    display: grid;
+    box-shadow:  12px  5px 3px 3px;
+    grid-template-columns: repeat(2,1fr);
+}
+button {
+    height: 3rem;
+    width: 10rem;
+    margin-left: 10rem;
+    border-radius: 8px;
+    background-color: rgb(204, 136, 236);
+    font-size: large;
+    cursor: pointer;
+}
+.register a {
+    text-decoration: none;
+}
+.footer {
+    height: 6rem;
+    padding-top: 2vh;
+    background-color: rgb(62, 65, 228);
+    color: wheat;
+    text-align: center;
+    font-size: larger;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    body{
+        display: grid;
+    }
+    .head{
+        font-size: small;
+        color: rgb(144, 238, 238);
+    }
+    .getIn {
+        width: 65vw;
+        height: 55vh;
+        margin: 5rem;
+        padding-bottom: 1.5rem;
+        color: white;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    button {
+        margin-left: 0rem;
+        width: 50vw;
+    }
+    .navigation {
+        display: none;
+        position: relative;
+    }
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(62, 65, 228);
+        text-align: center;
+        font-size: larger;
+        padding-left: 35%;
+    }
+    .navigation.active{
+        display: flex;
+    }
+    .hamburger{
+    display: block;
+    color: white;
+    }
+    .icon {
+        display: none;
+    }
+    .footer {
+        height: 10rem;
+    }
+}
+@media(min-width: 769px) {
+    .getIn{
+        height: fit-content;
+        padding-bottom: 3rem;
+    }
+    button {
+        margin-left:5rem;
+    }
+}

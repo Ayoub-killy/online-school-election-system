@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    z-index: border-box;
+}
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.intro {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+.head {
+    height: 20vh;
+    width: 80vw;
+    background-color: navy;
+    color: white;
+    margin-left: 8rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding: 1.5rem;
+    animation: slideIn 1s ease-out forwards;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.nominee-Head {
+    width: 0;
+    overflow: hidden;
+    padding: 10px;
+    white-space: nowrap;
+    animation: typing 2s steps(22) forwards;
+}
+@keyframes typing {
+    to {
+        width: 18ch;
+    }
+}
+.nomImages {
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 8%;
+}
+.nomImage {
+    height: 40vh;
+    width: 40vw;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: fade 4s ease-in backwards;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.nomInfo {
+    width: 40vw;
+    position: absolute;
+    bottom: -100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    color: black;
+    background: linear-gradient(to top, white, transparent);
+    transition: bottom 0.7s ease;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.nomImage:hover .nomInfo {
+    bottom: 0;
+}
+.nomImage img {
+    height: 40vh;
+    width: 40vw;
+    border-radius: 10px;
+}
+.first-container{
+    margin-top: 5rem;
+}
+.second-container{
+    margin-top: 5rem;
+}
+.third-container{
+    margin-top: 5rem;
+}
+.fourth-container{
+    margin-top: 5rem;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .head {
+        height: fit-content;
+        width: 75%;
+        margin: 5%;
+    }
+    .nominee-Head {
+        padding: 0;
+        font-size: medium;
+    }
+    .nomImages {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .nomImage {
+        width: auto;
+        height: fit-content;
+        background-color: transparent;
+        margin: 5%;
+    }
+    .nomImage img {
+        width: 75%;
+    }
+    .nomInfo:hover {
+        color: black;
+    }
+}
